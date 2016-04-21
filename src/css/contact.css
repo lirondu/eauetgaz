@@ -1,0 +1,11 @@
+#text_column {
+	padding: 15px;
+	overflow: hidden;
+	width: 25%;
+}
+
+#map_column {
+	overflow: hidden;
+	width: 75%;
+	height: 100%;
+}

@@ -1,0 +1,71 @@
+.cms-menu-btn {
+	margin-top: 12px;
+	background-color: transparent;
+	color: #FFF;
+	font-size: 0.75em;
+}
+
+.cms-menu-btn:first-child {
+	margin-right: 15px;
+}
+
+.cms-editable-text input[type="text"], .cms-editable-editor, .cms-editable-list {
+	padding: 7px;
+}
+
+.cke_editable_inline, .cms-editable-text input[type="text"], .cms-editable-list {
+	/*padding: 5px;*/
+	border: 1.3px dashed #000032;
+	border-radius: 4px;
+}
+
+h3.secondary_title {
+	margin-top: 0;
+}
+
+#article_content_en, #article_content_de {
+	margin-bottom: 3em;
+}
+
+#text_container input[type="text"] {
+	width: 100%;
+}
+
+#cms_inline_lang_sel {
+	margin: 3em 0 3em 0;
+}
+
+a.disabled {
+	pointer-events: none;
+	color: #909090;
+}
+
+label.error {
+	font-size: 13px !important;
+	color: #FF3333;
+}
+
+div#ok-message-box,
+div#error-message-box {
+    display: none;
+    opacity: 0.8;
+    filter: alpha(opacity=80); /* For IE8 and earlier */
+    height: auto;
+    width: auto;
+    padding: 15px 30px;
+    position: fixed;
+    bottom: 50px;
+    right: 25px;
+}
+
+div#ok-message-box {
+    background: #2A6496;
+    color: #F0F0F0;
+	border-radius: 4px;
+}
+
+div#error-message-box {
+    background: #c83939;
+    color: #FFF;
+	border-radius: 4px;
+}

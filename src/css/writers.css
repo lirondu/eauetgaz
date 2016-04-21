@@ -1,0 +1,12 @@
+h2.text-header {
+	font-size: 3em;
+	color: #000032;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+p.writer-article {
+	margin-top: 6em;
+	margin-bottom: 6em;
+	font-size: 0.95em;
+}

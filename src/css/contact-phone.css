@@ -1,0 +1,25 @@
+body {
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+#page_content {
+	opacity: 1 !important;
+}
+
+#map_column,
+#text_column {
+	width: 100%;
+}
+
+#map_column{
+	height: 500px;
+	padding: 0 25px;
+	overflow: hidden;
+}
+
+#text_column {
+	height: auto;
+	overflow: hidden;
+	padding: 25px;
+}
