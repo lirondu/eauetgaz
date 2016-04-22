@@ -3,3 +3,6 @@
 /typings/
 /.jshintrc
 /jsconfig.json
+/.settings/
+/.buildpath
+/.project
