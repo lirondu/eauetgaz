@@ -9,20 +9,19 @@ var ClientAgent = {
 		link.type = 'text/css';
 		link.href = path;		
 
-		if (id != undefined) {
-			link.id = id
-
+		if (id !== undefined) {
+			link.id = id;
 		}
 		
 		body.appendChild(link);
 	},
 	
-	// Add js function
+	// Remove CSS function
 	RemoveCssLink: function (id) {
 		var body = document.getElementsByTagName('body')[0];
 		var el = document.getElementById(id);
 		
-		if (el != undefined) {
+		if (el !== undefined && el !== null) {
 			body.removeChild(el);
 		}
 	}

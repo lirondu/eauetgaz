@@ -1,5 +1,4 @@
-/* global ColumnsLayout */
-/* global GlobalHelper, CKEDITOR */
+/* global GlobalHelper, ClientAgent */
 
 var ArticlePage = {
 	lastNumOfCols: 0,

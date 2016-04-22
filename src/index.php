@@ -7,6 +7,7 @@ require_once './php/db-functions.php';
 require_once './login/expire.php';
 
 $_SESSION['LOGIN_FWD_URI'] = $_SERVER['REQUEST_URI'];
+$_SESSION['referer'] = $_SERVER['REQUEST_URI'];
 
 $adminSession = false;
 if (isset($_SESSION['valid_admin']) && $_SESSION['valid_admin']) {

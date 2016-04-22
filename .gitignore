@@ -1,2 +1,5 @@
 /src/images/
 /nbproject/
+/typings/
+/.jshintrc
+/jsconfig.json

@@ -4,13 +4,13 @@ CKEDITOR.disableAutoInline = true;
 
 CKEDITOR.on('instanceCreated', function (event) {
 	var editor = event.editor,
-			element = editor.element;
+		element = editor.element;
 
 	if (element.is('h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'h7')) {
 		editor.on('configLoaded', function () {
 			editor.config.removePlugins = 'about,basicstyles,colorbutton,find,flash,font,' +
-					'forms,iframe,image,newpage,removeformat,' +
-					'scayt,smiley,specialchar,stylescombo,templates,links';
+				'forms,iframe,image,newpage,removeformat,' +
+				'scayt,smiley,specialchar,stylescombo,templates,links';
 
 			editor.config.removeButtons = 'Link,Unlink,Anchor,PasteFromWord,Outdent,Indent';
 
@@ -25,13 +25,18 @@ function EnableAdminButtonsOnChange() {
 
 function InitializeInlineEditors() {
 	$('.cms-editable-editor').each(function () {
-		CKEDITOR.inline(this, {
+		var cke = CKEDITOR.inline(this, {
 			filebrowserBrowseUrl: 'admin/elFinder-2.1.6/elfinder.php',
 			on: {
 				change: function () {
 					EnableAdminButtonsOnChange();
 				}
 			}
+		});
+
+		cke.on('instanceReady', function (ev) {
+			var editor = ev.editor;
+			editor.setReadOnly(false);
 		});
 	});
 
@@ -53,7 +58,7 @@ function InitializeInlineEditors() {
 		var ids = $('#edit_' + listName + '_ids').val().split(',');
 
 		var selectList = $('<select class="cms-editable-list" data-toggle="tooltip"' +
-				' name="' + dbFieldName + '" title="' + title + '"></select>');
+			' name="' + dbFieldName + '" title="' + title + '"></select>');
 
 		for (var i = 0; i < names.length; i++) {
 			if (ids[i] === active) {
@@ -89,7 +94,7 @@ function SerializePageInlineContent() {
 		}
 	});
 
-
+	alert(data);
 	return data;
 }
 
@@ -109,7 +114,7 @@ function SubmitInlineForm(table, data) {
 	switch (table) {
 		case 'article':
 			var tmpData = data + '&mod_data=update-inline-article';
-//			console.log(tmpData); return ;
+			//			console.log(tmpData); return ;
 			$.ajax({
 				type: "POST",
 				url: "./admin/php/db-modifier.php",
@@ -123,7 +128,7 @@ function SubmitInlineForm(table, data) {
 			});
 			break;
 
-		default :
+		default:
 			break;
 	}
 }
@@ -150,7 +155,7 @@ $(function () {
 	InitializeInlineEditors();
 
 	// Bootstrap tooltip
-	$('[data-toggle="tooltip"]').tooltip()
+	$('[data-toggle="tooltip"]').tooltip();
 
 	// Cancel button action
 	$('#cancel_page_changes').click(function () {

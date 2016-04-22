@@ -2,7 +2,7 @@
 session_start();
 session_destroy();
 
-$referer = (isset($_GET['referer'])) ? $_GET['referer'] : $_SERVER['HTTP_REFERER'];
+$referer = (isset($_SESSION['LOGIN_FWD_URI'])) ? $_SESSION['LOGIN_FWD_URI'] : '/';
 
 header('Location: '.$referer);
 ?>
